@@ -33,5 +33,5 @@ describe("My First Test", () => {
     cy.wait(1000);
     cy.get("label").eq(2).click();
   });
-
 });
+
