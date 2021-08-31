@@ -10,7 +10,7 @@ describe("My First Test", () => {
       .type("Walk the dog")
       .should("have.value", "Walk the dog");
   });
-  it("checks and unchecks checkboxes", () => {
+  it("checks and unchecking checkboxes", () => {
     cy.get("[newTodo-input]").type("{enter}");
     cy.get("#checkboxLabel").click();
     cy.get("label > :checkbox ").check();
