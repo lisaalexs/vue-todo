@@ -1,10 +1,10 @@
 describe("My First Test", () => {
-  it("Visits the app root url", () => {
-    cy.visit("/");
+  beforeEach(() => {
+    cy.visit("http://localhost:8080");
   });
   it('shows header text', () => {
     cy.get('div').contains('to do list');
-  })
+  });
   it("input data", () => {
     cy.get("[newTodo-input]")
       .type("Walk the dog")
