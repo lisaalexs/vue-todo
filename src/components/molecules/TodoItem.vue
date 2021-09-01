@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.todoItem">
-    <label :class="$style.customCheckbox">
+    <label :class="$style.customCheckbox" id="checkboxLabel">
       <input type="checkbox" :checked="isChecked" @click="change" />
       <span>{{ taskTitle }}</span>
     </label>
