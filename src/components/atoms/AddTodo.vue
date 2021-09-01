@@ -8,6 +8,7 @@
       id="newTodoInput"
     />
     <input type="submit" :class="$style.addTodo" class="addTodo" value="Add a new task" />
+    />
   </form>
 </template>
 
