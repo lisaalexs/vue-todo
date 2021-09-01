@@ -5,8 +5,9 @@
       :class="$style.textInput"
       placeholder="Type your todo here..."
       v-model="newInput"
+      id="newTodoInput"
     />
-    <input type="submit" :class="$style.addTodo" value="Add a new task" />
+    <input type="submit" :class="$style.addTodo" value="Add a new task" id="addTodo" />
   </form>
 </template>
 

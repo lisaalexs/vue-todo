@@ -1,8 +1,8 @@
 <template>
   <div :class="$style.todoItem">
-    <label :class="$style.customCheckbox">
-      <input type="checkbox" :checked="isChecked" @click="change" />
-      <span>{{ taskTitle }}</span>
+    <label :class="$style.customCheckbox" class="checkboxLabel">
+      <input type="checkbox" :checked="isChecked" @click="change" class="checkB" />
+      <span class="taskTitle">{{ taskTitle }}</span>
     </label>
     <div :class="$style.close" @click="remove"></div>
   </div>
