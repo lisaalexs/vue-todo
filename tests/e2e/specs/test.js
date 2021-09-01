@@ -1,16 +1,13 @@
 describe("My First Test", () => {
-  it("Visits the app root url", () => {
-    cy.visit("/");
+  beforeEach(() => {
+    cy.visit('http://localhost:8080');
   });
-  it('shows header text', () => {
-    cy.get('div').contains('to do list');
-  })
   it("input data", () => {
     cy.get("[newTodo-input]")
       .type("Walk the dog")
       .should("have.value", "Walk the dog");
   });
-  it("checks and unchecking checkboxes", () => {
+  it("checks and unchecks checkboxes", () => {
     cy.get("[newTodo-input]").type("{enter}");
     cy.get("#checkboxLabel").click();
     cy.get("label > :checkbox ").check();
@@ -30,7 +27,7 @@ describe("My First Test", () => {
     cy.get("label > :checkbox").first().check();
     cy.get("label > :radio").should("have.length", 3);
     cy.get("label").eq(1).click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get("label").eq(2).click();
   });
 });
